@@ -1,0 +1,122 @@
+/* Wrapper ensures seamless black background */
+.contact-footer-wrapper {
+  background: black;
+  color: white;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Contact Section */
+.contact-section {
+  position: relative;
+  width: 100%;
+  max-width: 2560px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: black; 
+}
+
+.contact-bg {
+  width: 100%;
+  height: auto;
+  object-fit: contain;   /*  no cropping */
+  display: block;
+  margin: 0 auto;
+  background: black;     /*  fills bars with black */
+}
+
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.contact-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.contact-content h2 {
+  text-transform: uppercase;
+  color: white;
+  
+  margin-bottom: 15px;
+  line-height: 1.1;
+  word-break: break-word;
+}
+
+.desktop-text {
+  display: block;
+  font-size: clamp(26px, 4vw, 52px);
+}
+.mobile-text {
+  display: none;
+}
+
+/* Buttons */
+.contact-content button {
+  background: white;
+  color: black;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px 22px;
+  font-size: 16px;
+}
+.contact-content button:hover {
+  background: #581bba;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/*  Mobile */
+@media (max-width: 640px) {
+  .desktop-text {
+    display: none;
+  }
+  .mobile-text {
+    display: block;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .contact-content button {
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 6px;
+  }
+}
+
+/*  Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .desktop-text {
+    font-size: 28px;
+  }
+  .contact-content button {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
+
+/*  Large desktop */
+@media (min-width: 1025px) {
+  .desktop-text {
+    font-size: 48px;
+  }
+  .contact-content button {
+    font-size: 16px;
+    padding: 10px 22px;
+  }
+}
+
